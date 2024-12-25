@@ -210,16 +210,8 @@
 </header>
 
 <div class="video-background">
-    <video autoplay loop playsinline id="background-video">
-        <source src="https://github.com/HiTurkiye/www.turkiyehi.com/blob/main/Istanbul%20Whispers%20A%20Journey%20by%20Jamal%20Al%20Ansari%20%20%40HiTurkiye%20%23HiTurkiye.mp4?raw=true" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/TVUMhEOHFBY?autoplay=1&mute=0&loop=1&playlist=TVUMhEOHFBY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
-
-<audio id="background-audio" autoplay loop>
-    <source src="https://github.com/HiTurkiye/www.turkiyehi.com/blob/main/Istanbul%20Whispers.mp3?raw=true" type="audio/mpeg">
-    Your browser does not support the audio element.
-</audio>
 
 <div class="container">
     <div class="city-grid">
@@ -339,12 +331,9 @@
     }
 
     function toggleMute() {
-        const video = document.getElementById('background-video');
-        const audio = document.getElementById('background-audio');
-        const isMuted = video.muted;
-
-        video.muted = !isMuted;
-        audio.muted = !isMuted;
+        const iframe = document.querySelector('.video-background iframe');
+        const url = iframe.src;
+        iframe.src = url.includes('mute=0') ? url.replace('mute=0', 'mute=1') : url.replace('mute=1', 'mute=0');
     }
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap"></script>
