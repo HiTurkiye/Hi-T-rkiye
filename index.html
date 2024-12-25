@@ -312,7 +312,15 @@
             const response = await fetch(`https://maps.googleapis.com/maps/api/place/textsearch/json?query=top+attractions+in+${cityName}&key=${apiKey}`);
             const data = await response.json();
 
-            data.results.slice(0, 10).forEach((place) => {
+            const places = data.results.slice(0, 10);
+            if (places.length === 0) {
+                const li = document.createElement('li');
+                li.textContent = 'No places found.';
+                placesList.appendChild(li);
+                return;
+            }
+
+            places.forEach((place) => {
                 const li = document.createElement('li');
                 li.innerHTML = `<a href="https://www.google.com/maps/place/${encodeURIComponent(place.name)}" target="_blank">${place.name}</a> - Rating: ${place.rating}`;
                 placesList.appendChild(li);
@@ -339,6 +347,6 @@
         audio.muted = !isMuted;
     }
 </script>
-<script async src="https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap"></script>
 </body>
 </html>
