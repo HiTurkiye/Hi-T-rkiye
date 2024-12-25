@@ -37,39 +37,30 @@
         }
 
         .city-card {
-            background-color: rgba(255, 255, 255, 0.8);
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s;
             cursor: pointer;
-            color: black;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .city-card:hover {
             transform: scale(1.05);
-        }
-
-        .city-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
         }
 
         .city-card h3 {
             margin: 15px;
             font-size: 1.5rem;
             text-align: center;
-        }
-
-        .details {
-            display: none;
-            margin-top: 20px;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            color: black;
         }
 
         .footer {
@@ -195,44 +186,34 @@
 
 <div class="container">
     <div class="city-grid">
-        <div class="city-card" onclick="fetchCityData('Istanbul', 41.0082, 28.9784)">
-            <img src="https://source.unsplash.com/600x400/?istanbul" alt="Istanbul">
+        <div class="city-card" style="background-image: url('https://source.unsplash.com/600x400/?istanbul');" onclick="fetchCityData('Istanbul', 41.0082, 28.9784)">
             <h3>Istanbul</h3>
         </div>
-        <div class="city-card" onclick="fetchCityData('Cappadocia', 38.6431, 34.8308)">
-            <img src="https://source.unsplash.com/600x400/?cappadocia" alt="Cappadocia">
+        <div class="city-card" style="background-image: url('https://source.unsplash.com/600x400/?cappadocia');" onclick="fetchCityData('Cappadocia', 38.6431, 34.8308)">
             <h3>Cappadocia</h3>
         </div>
-        <div class="city-card" onclick="fetchCityData('Antalya', 36.8969, 30.7133)">
-            <img src="https://source.unsplash.com/600x400/?antalya" alt="Antalya">
+        <div class="city-card" style="background-image: url('https://source.unsplash.com/600x400/?antalya');" onclick="fetchCityData('Antalya', 36.8969, 30.7133)">
             <h3>Antalya</h3>
         </div>
-        <div class="city-card" onclick="fetchCityData('Izmir', 38.4192, 27.1287)">
-            <img src="https://source.unsplash.com/600x400/?izmir" alt="Izmir">
+        <div class="city-card" style="background-image: url('https://source.unsplash.com/600x400/?izmir');" onclick="fetchCityData('Izmir', 38.4192, 27.1287)">
             <h3>Izmir</h3>
         </div>
-        <div class="city-card" onclick="fetchCityData('Bodrum', 37.0344, 27.4305)">
-            <img src="https://source.unsplash.com/600x400/?bodrum" alt="Bodrum">
+        <div class="city-card" style="background-image: url('https://source.unsplash.com/600x400/?bodrum');" onclick="fetchCityData('Bodrum', 37.0344, 27.4305)">
             <h3>Bodrum</h3>
         </div>
-        <div class="city-card" onclick="fetchCityData('Fethiye', 36.6211, 29.1172)">
-            <img src="https://source.unsplash.com/600x400/?fethiye" alt="Fethiye">
+        <div class="city-card" style="background-image: url('https://source.unsplash.com/600x400/?fethiye');" onclick="fetchCityData('Fethiye', 36.6211, 29.1172)">
             <h3>Fethiye</h3>
         </div>
-        <div class="city-card" onclick="fetchCityData('Ankara', 39.9208, 32.8541)">
-            <img src="https://source.unsplash.com/600x400/?ankara" alt="Ankara">
+        <div class="city-card" style="background-image: url('https://source.unsplash.com/600x400/?ankara');" onclick="fetchCityData('Ankara', 39.9208, 32.8541)">
             <h3>Ankara</h3>
         </div>
-        <div class="city-card" onclick="fetchCityData('Pamukkale', 37.9188, 29.1286)">
-            <img src="https://source.unsplash.com/600x400/?pamukkale" alt="Pamukkale">
+        <div class="city-card" style="background-image: url('https://source.unsplash.com/600x400/?pamukkale');" onclick="fetchCityData('Pamukkale', 37.9188, 29.1286)">
             <h3>Pamukkale</h3>
         </div>
-        <div class="city-card" onclick="fetchCityData('Trabzon', 41.0015, 39.7178)">
-            <img src="https://source.unsplash.com/600x400/?trabzon" alt="Trabzon">
+        <div class="city-card" style="background-image: url('https://source.unsplash.com/600x400/?trabzon');" onclick="fetchCityData('Trabzon', 41.0015, 39.7178)">
             <h3>Trabzon</h3>
         </div>
-        <div class="city-card" onclick="fetchCityData('Konya', 37.8721, 32.4932)">
-            <img src="https://source.unsplash.com/600x400/?konya" alt="Konya">
+        <div class="city-card" style="background-image: url('https://source.unsplash.com/600x400/?konya');" onclick="fetchCityData('Konya', 37.8721, 32.4932)">
             <h3>Konya</h3>
         </div>
     </div>
@@ -312,6 +293,6 @@
         iframe.src = url.includes('mute=0') ? url.replace('mute=0', 'mute=1') : url.replace('mute=1', 'mute=0');
     }
 </script>
-<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCDyY7adiVPf6jO_Ccufp11Sgz0Cv1_ns&callback=initMap"></script>
+<script async src="https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap"></script>
 </body>
 </html>
