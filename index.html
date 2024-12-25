@@ -335,6 +335,11 @@
         const url = iframe.src;
         iframe.src = url.includes('mute=0') ? url.replace('mute=0', 'mute=1') : url.replace('mute=1', 'mute=0');
     }
+
+    document.querySelector('.video-background iframe').addEventListener('load', () => {
+        const iframe = document.querySelector('.video-background iframe');
+        iframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+    });
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap"></script>
 </body>
