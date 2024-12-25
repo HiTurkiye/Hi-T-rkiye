@@ -83,6 +83,7 @@
             left: 0;
             width: 100%;
             height: 100%;
+            object-fit: cover;
             z-index: -1;
             pointer-events: none;
         }
@@ -209,11 +210,16 @@
 </header>
 
 <div class="video-background">
-    <video autoplay loop playsinline muted id="background-video">
+    <video autoplay loop playsinline id="background-video">
         <source src="https://github.com/HiTurkiye/www.turkiyehi.com/blob/main/Istanbul%20Whispers%20A%20Journey%20by%20Jamal%20Al%20Ansari%20%20%40HiTurkiye%20%23HiTurkiye.mp4?raw=true" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 </div>
+
+<audio id="background-audio" autoplay loop>
+    <source src="https://github.com/HiTurkiye/www.turkiyehi.com/blob/main/Istanbul%20Whispers.mp3?raw=true" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
 
 <div class="container">
     <div class="city-grid">
@@ -326,7 +332,11 @@
 
     function toggleMute() {
         const video = document.getElementById('background-video');
-        video.muted = !video.muted;
+        const audio = document.getElementById('background-audio');
+        const isMuted = video.muted;
+
+        video.muted = !isMuted;
+        audio.muted = !isMuted;
     }
 </script>
 <script async src="https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap"></script>
