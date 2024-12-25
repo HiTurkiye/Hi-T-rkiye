@@ -5,7 +5,201 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Best Cities to Visit in Turkey</title>
     <style>
-        /* Your existing CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .container {
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+
+        .city-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .city-card {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .city-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+        }
+
+        .city-card h3 {
+            margin: 15px;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        .footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .footer a {
+            color: #FFD700;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.2rem;
+        }
+
+        .youtube-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            color: #FFD700;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.5rem;
+        }
+
+        .background-song {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .background-song button {
+            padding: 10px;
+            font-size: 1rem;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .background-song button:hover {
+            background-color: #0056b3;
+        }
+
+        .contact-section {
+            margin: 40px auto;
+            max-width: 800px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            color: black;
+        }
+
+        .contact-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-section form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-section input,
+        .contact-section textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-section input[type="file"] {
+            border: none;
+        }
+
+        .contact-section button {
+            padding: 10px;
+            font-size: 1rem;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact-section button:hover {
+            background-color: #0056b3;
+        }
+
+        #map {
+            height: 400px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .places-list {
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            color: black;
+        }
+
+        .places-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .places-list ul li {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: rgba(240, 240, 240, 0.9);
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .places-list ul li a {
+            text-decoration: none;
+            color: #007BFF;
+        }
     </style>
 </head>
 <body>
@@ -14,8 +208,8 @@
     <h1>Best Cities to Visit in Turkey</h1>
 </header>
 
-<div class="video-background">
-    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/TVUMhEOHFBY?autoplay=1&mute=0&loop=1&playlist=TVUMhEOHFBY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<div class="youtube-background">
+    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/TVUMhEOHFBY?autoplay=1&mute=1&loop=1&playlist=TVUMhEOHFBY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
 
 <div class="container">
@@ -109,15 +303,7 @@
             const response = await fetch(`https://maps.googleapis.com/maps/api/place/textsearch/json?query=top+attractions+in+${cityName}&key=${apiKey}`);
             const data = await response.json();
 
-            const places = data.results.slice(0, 10);
-            if (places.length === 0) {
-                const li = document.createElement('li');
-                li.textContent = 'No places found.';
-                placesList.appendChild(li);
-                return;
-            }
-
-            places.forEach((place) => {
+            data.results.slice(0, 10).forEach((place) => {
                 const li = document.createElement('li');
                 li.innerHTML = `<a href="https://www.google.com/maps/place/${encodeURIComponent(place.name)}" target="_blank">${place.name}</a> - Rating: ${place.rating}`;
                 placesList.appendChild(li);
@@ -136,16 +322,11 @@
     }
 
     function toggleMute() {
-        const iframe = document.querySelector('.video-background iframe');
+        const iframe = document.querySelector('.youtube-background iframe');
         const url = iframe.src;
-        iframe.src = url.includes('mute=0') ? url.replace('mute=0', 'mute=1') : url.replace('mute=1', 'mute=0');
+        iframe.src = url.includes('mute=1') ? url.replace('mute=1', 'mute=0') : url.replace('mute=0', 'mute=1');
     }
-
-    document.querySelector('.video-background iframe').addEventListener('load', () => {
-        const iframe = document.querySelector('.video-background iframe');
-        iframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
-    });
 </script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCDyY7adiVPf6jO_Ccufp11Sgz0Cv1_ns&callback=initMap"></script>
+<script async src="https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap"></script>
 </body>
 </html>
