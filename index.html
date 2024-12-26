@@ -200,6 +200,40 @@
             text-decoration: none;
             color: #007BFF;
         }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .city-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+
+            .city-card {
+                height: 150px;
+            }
+
+            .contact-section {
+                margin: 20px;
+                padding: 15px;
+            }
+
+            #map {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .city-grid {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 1.5rem;
+            }
+        }
     </style>
 </head>
 <body>
