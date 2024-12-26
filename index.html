@@ -239,43 +239,43 @@
 <body>
 
 <header>
-    <h1>Best Cities to Visit in Turkey</h1>
+    <h1 tabindex="0">Best Cities to Visit in Turkey</h1>
 </header>
 
 <div class="youtube-background">
-    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/TVUMhEOHFBY?autoplay=1&mute=1&loop=1&playlist=TVUMhEOHFBY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <iframe title="Background Video" width="100%" height="100%" src="https://www.youtube.com/embed/TVUMhEOHFBY?autoplay=1&mute=1&loop=1&playlist=TVUMhEOHFBY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
 
 <div class="container">
     <div class="city-grid">
-        <div class="city-card" style="background-image: url('https://source.unsplash.com/600x400/?istanbul');" onclick="fetchCityData('Istanbul', 41.0082, 28.9784)">
+        <div class="city-card" style="background-image: url('https://source.unsplash.com/600x400/?istanbul');" onclick="fetchCityData('Istanbul', 41.0082, 28.9784)" tabindex="0" role="button" aria-label="Explore Istanbul">
             <h3>Istanbul</h3>
         </div>
-        <div class="city-card" style="background-image: url('https://source.unsplash.com/600x400/?cappadocia');" onclick="fetchCityData('Cappadocia', 38.6431, 34.8308)">
+        <div class="city-card" style="background-image: url('https://source.unsplash.com/600x400/?cappadocia');" onclick="fetchCityData('Cappadocia', 38.6431, 34.8308)" tabindex="0" role="button" aria-label="Explore Cappadocia">
             <h3>Cappadocia</h3>
         </div>
-        <div class="city-card" style="background-image: url('https://source.unsplash.com/600x400/?antalya');" onclick="fetchCityData('Antalya', 36.8969, 30.7133)">
+        <div class="city-card" style="background-image: url('https://source.unsplash.com/600x400/?antalya');" onclick="fetchCityData('Antalya', 36.8969, 30.7133)" tabindex="0" role="button" aria-label="Explore Antalya">
             <h3>Antalya</h3>
         </div>
-        <div class="city-card" style="background-image: url('https://source.unsplash.com/600x400/?izmir');" onclick="fetchCityData('Izmir', 38.4192, 27.1287)">
+        <div class="city-card" style="background-image: url('https://source.unsplash.com/600x400/?izmir');" onclick="fetchCityData('Izmir', 38.4192, 27.1287)" tabindex="0" role="button" aria-label="Explore Izmir">
             <h3>Izmir</h3>
         </div>
-        <div class="city-card" style="background-image: url('https://source.unsplash.com/600x400/?bodrum');" onclick="fetchCityData('Bodrum', 37.0344, 27.4305)">
+        <div class="city-card" style="background-image: url('https://source.unsplash.com/600x400/?bodrum');" onclick="fetchCityData('Bodrum', 37.0344, 27.4305)" tabindex="0" role="button" aria-label="Explore Bodrum">
             <h3>Bodrum</h3>
         </div>
-        <div class="city-card" style="background-image: url('https://source.unsplash.com/600x400/?fethiye');" onclick="fetchCityData('Fethiye', 36.6211, 29.1172)">
+        <div class="city-card" style="background-image: url('https://source.unsplash.com/600x400/?fethiye');" onclick="fetchCityData('Fethiye', 36.6211, 29.1172)" tabindex="0" role="button" aria-label="Explore Fethiye">
             <h3>Fethiye</h3>
         </div>
-        <div class="city-card" style="background-image: url('https://source.unsplash.com/600x400/?ankara');" onclick="fetchCityData('Ankara', 39.9208, 32.8541)">
+        <div class="city-card" style="background-image: url('https://source.unsplash.com/600x400/?ankara');" onclick="fetchCityData('Ankara', 39.9208, 32.8541)" tabindex="0" role="button" aria-label="Explore Ankara">
             <h3>Ankara</h3>
         </div>
-        <div class="city-card" style="background-image: url('https://source.unsplash.com/600x400/?pamukkale');" onclick="fetchCityData('Pamukkale', 37.9188, 29.1286)">
+        <div class="city-card" style="background-image: url('https://source.unsplash.com/600x400/?pamukkale');" onclick="fetchCityData('Pamukkale', 37.9188, 29.1286)" tabindex="0" role="button" aria-label="Explore Pamukkale">
             <h3>Pamukkale</h3>
         </div>
-        <div class="city-card" style="background-image: url('https://source.unsplash.com/600x400/?trabzon');" onclick="fetchCityData('Trabzon', 41.0015, 39.7178)">
+        <div class="city-card" style="background-image: url('https://source.unsplash.com/600x400/?trabzon');" onclick="fetchCityData('Trabzon', 41.0015, 39.7178)" tabindex="0" role="button" aria-label="Explore Trabzon">
             <h3>Trabzon</h3>
         </div>
-        <div class="city-card" style="background-image: url('https://source.unsplash.com/600x400/?konya');" onclick="fetchCityData('Konya', 37.8721, 32.4932)">
+        <div class="city-card" style="background-image: url('https://source.unsplash.com/600x400/?konya');" onclick="fetchCityData('Konya', 37.8721, 32.4932)" tabindex="0" role="button" aria-label="Explore Konya">
             <h3>Konya</h3>
         </div>
     </div>
@@ -284,35 +284,35 @@
 <div id="map"></div>
 
 <div class="places-list" id="places-list">
-    <h2>Top Places</h2>
+    <h2 tabindex="0">Top Places</h2>
     <ul></ul>
 </div>
 
 <div class="contact-section">
-    <h2>Contact Us for Medical Tourism</h2>
+    <h2 tabindex="0">Contact Us for Medical Tourism</h2>
     <form action="https://formspree.io/f/example" method="POST" enctype="multipart/form-data">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <input type="tel" name="phone" placeholder="Your Phone Number" required>
-        <textarea name="description" rows="5" placeholder="Please provide a brief description of your problem and attach your medical report. We will reply with a professional, comprehensive quotation including costs, airport-to-hotel transportation, and organized hospital appointments with high care and precision."></textarea>
+        <input type="text" name="name" placeholder="Your Name" required aria-label="Enter your name">
+        <input type="email" name="email" placeholder="Your Email" required aria-label="Enter your email">
+        <input type="tel" name="phone" placeholder="Your Phone Number" required aria-label="Enter your phone number">
+        <textarea name="description" rows="5" placeholder="Provide a brief description of your issue." aria-label="Provide a description"></textarea>
         <label for="file">Attach Medical Report (Optional):</label>
-        <input type="file" name="medical_report" id="file">
-        <button type="submit">Submit</button>
+        <input type="file" name="medical_report" id="file" aria-label="Attach a medical report">
+        <button type="submit" aria-label="Submit form">Submit</button>
     </form>
 </div>
 
 <footer class="footer">
     <p>&copy; 2024 HiTürkiye</p>
     <div class="social-icons">
-        <a href="https://www.youtube.com/@HiTurkiye" target="_blank">YouTube</a>
-        <a href="https://x.com/HiTurkiye01" target="_blank">Twitter</a>
-        <a href="https://tiktok.com/@hiturkiye1" target="_blank">TikTok</a>
-        <a href="https://www.instagram.com/turkiyehi/" target="_blank">Instagram</a>
+        <a href="https://www.youtube.com/@HiTurkiye" target="_blank" aria-label="Visit our YouTube channel">YouTube</a>
+        <a href="https://x.com/HiTurkiye01" target="_blank" aria-label="Visit our Twitter page">Twitter</a>
+        <a href="https://tiktok.com/@hiturkiye1" target="_blank" aria-label="Visit our TikTok profile">TikTok</a>
+        <a href="https://www.instagram.com/turkiyehi/" target="_blank" aria-label="Visit our Instagram profile">Instagram</a>
     </div>
 </footer>
 
 <div class="background-song">
-    <button onclick="toggleMute()">Mute/Unmute</button>
+    <button onclick="toggleMute()" aria-label="Mute or unmute the background music">Mute/Unmute</button>
 </div>
 
 <script>
