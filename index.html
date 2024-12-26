@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Best Cities to Visit in Turkey</title>
+    <meta name="description" content="Explore the best cities in Turkey for travel, medical tourism, and more. Discover Istanbul, Cappadocia, Antalya, and more beautiful locations with full travel and treatment packages." />
+    <meta property="og:title" content="Best Cities to Visit in Turkey">
+    <meta property="og:description" content="Discover Turkey's top destinations with expert guidance, from Istanbul to Cappadocia. Learn about travel, medical tourism, and unique cultural experiences." />
+    <meta property="og:image" content="https://source.unsplash.com/600x400/?turkey">
+    <meta property="og:url" content="https://yourwebsite.com">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -23,6 +28,21 @@
         header h1 {
             font-size: 3rem;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .about-section {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: black;
+            text-align: justify;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+
+        .about-section h2 {
+            text-align: center;
         }
 
         .container {
@@ -242,6 +262,11 @@
     <h1 tabindex="0">Best Cities to Visit in Turkey</h1>
 </header>
 
+<div class="about-section">
+    <h2>About Turkey</h2>
+    <p>Turkey is a magnificent country that bridges Europe and Asia, offering a unique blend of cultures, history, and stunning landscapes. From the bustling streets of Istanbul to the tranquil beaches of Antalya, there is something for every traveler. Experience ancient ruins, vibrant bazaars, and world-class cuisine as you explore this incredible nation.</p>
+</div>
+
 <div class="youtube-background">
     <iframe title="Background Video" width="100%" height="100%" src="https://www.youtube.com/embed/TVUMhEOHFBY?autoplay=1&mute=1&loop=1&playlist=TVUMhEOHFBY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
@@ -291,6 +316,7 @@
 <div class="contact-section">
     <h2 tabindex="0">Contact Us for Medical Tourism</h2>
     <form action="https://formspree.io/f/example" method="POST" enctype="multipart/form-data">
+        <p>Please provide a brief description of your medical inquiry, including details of your treatment needs. Attach your medical report for a professional quotation. Our quotation includes detailed costs, transportation from the airport to your hotel, hospital appointments, interpreters, and high-quality care throughout your stay.</p>
         <input type="text" name="name" placeholder="Your Name" required aria-label="Enter your name">
         <input type="email" name="email" placeholder="Your Email" required aria-label="Enter your email">
         <input type="tel" name="phone" placeholder="Your Phone Number" required aria-label="Enter your phone number">
@@ -361,31 +387,4 @@
                 placesList.innerHTML += `<h3>${categoryNames[i]}</h3>`;
 
                 data.results.slice(0, 10).forEach((place) => {
-                    const li = document.createElement('li');
-                    li.innerHTML = `<a href="https://www.google.com/maps/place/${encodeURIComponent(place.name)}" target="_blank">${place.name}</a> - Rating: ${place.rating || 'N/A'}`;
-                    placesList.appendChild(li);
-
-                    new google.maps.Marker({
-                        position: place.geometry.location,
-                        map,
-                        title: place.name,
-                    });
-                });
-            }
-        } catch (error) {
-            console.error('Error fetching data:', error);
-            const li = document.createElement('li');
-            li.textContent = 'Error fetching data. Please try again later.';
-            placesList.appendChild(li);
-        }
-    }
-
-    function toggleMute() {
-        const iframe = document.querySelector('.youtube-background iframe');
-        const url = iframe.src;
-        iframe.src = url.includes('mute=1') ? url.replace('mute=1', 'mute=0') : url.replace('mute=0', 'mute=1');
-    }
-</script>
-<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrg8r4yfl_Ttf4oWPI_jhbVSQu8-6s61U&callback=initMap"></script>
-</body>
-</html>
+                    const li = document
