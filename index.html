@@ -293,8 +293,13 @@
         });
     }
 
+    function scrollToMap() {
+        document.getElementById('map').scrollIntoView({ behavior: 'smooth' });
+    }
+
     async function fetchCityData(cityName, lat, lng) {
         initMap(lat, lng);
+        scrollToMap();
 
         const placesList = document.getElementById('places-list').querySelector('ul');
         placesList.innerHTML = '';
